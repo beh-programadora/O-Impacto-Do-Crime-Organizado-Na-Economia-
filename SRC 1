@@ -1,0 +1,104 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from mpl_toolkits.mplot3d import Axes3D
+import plotly.graph_objects as go
+
+# Dados de exemplo
+data = {
+    'País': ['Brasil', 'Chile', 'Colômbia', 'Argentina', 'Austrália', 'Nova Zelândia'],
+    'Porcentagem do dado A': [80, 54, 68.1, 55, 48, 52],
+    'Porcentagem do dado B': [75, 87, 80, 70, 60, 65],
+    'Faturamento das facções com o fluxo (R$ bilhões)': [335, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Número de Facções Criminosas': [72, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Número com Presença do PCC': [23, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Estados com Presença do PCC': [20, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Estados com Presença do Comando Vermelho': [20, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Percentual do PIB do Potencial de Faturamento (%)': [3.98, np.nan, np.nan, np.nan, np.nan, np.nan]
+}
+
+df = pd.DataFrame(data)
+
+# Gráficos com matplotlib e seaborn
+fig, ax = plt.subplots(2, 2, figsize=(15, 10))
+
+# Gráfico de barras - Porcentagem do dado A e B
+ax[0, 0].bar(df['País'], df['Porcentagem do dado A'], color='b', alpha=0.6, label='Dado A')
+ax[0, 0].bar(df['País'], df['Porcentagem do dado B'], color='r', alpha=0.6, label='Dado B')
+ax[0, 0].set_xlabel('País')
+ax[0, 0].set_ylabel('Porcentagem')
+ax[0, 0].set_title('Porcentagem dos Dados A e B por País')
+ax[0, 0].legend()
+
+# Gráfico de linha - Faturamento das facções com o fluxo
+ax[0, 1].plot(df['País'], df['Faturamento das facções com o fluxo (R$ bilhões)'], marker='o', linestyle='-')
+ax[0, 1].set_xlabel('País')
+ax[0, 1].set_ylabel('Faturamento (R$ bilhões)')
+ax[0, 1].set_title('Faturamento das Facções com o Fluxo')
+
+# Gráfico de dispersão - Número de Facções Criminosas vs. Percentual do PIB
+sns.scatterplot(x='Número de Facções Criminosas', y='Percentual do PIB do Potencial de Faturamento (%)', data=df, ax=ax[1, 0])
+ax[1, 0].set_xlabel('Número de Facções Criminosas')
+ax[1, 0].set_ylabel('Percentual do PIB (%)')
+ax[1, 0].set_title('Número de Facções vs. Percentual do PIB')
+
+# Gráfico de barras horizontal - Estados com Presença do PCC e Comando Vermelho
+df_long = pd.melt(df[['País', 'Estados com Presença do PCC', 'Estados com Presença do Comando Vermelho']], id_vars='País', var_name='Fração', value_name='Número de Estados')
+ax[1, 1].barh(df_long['País'], df_long['Número de Estados'], color=['blue', 'green'], alpha=0.6)
+ax[1, 1].set_xlabel('Número de Estados')
+ax[1, 1].set_title('Estados com Presença do PCC e Comando Vermelho')
+
+plt.tight_layout()
+plt.show()
+
+# Gráficos 3D interativos com Plotly
+fig_3d = go.Figure()
+
+# Gráfico 3D de dispersão - Países, Porcentagem do Dado A e Porcentagem do Dado B
+fig_3d.add_trace(go.Scatter3d(
+    x=df['Porcentagem do dado A'],
+    y=df['Porcentagem do dado B'],
+    z=df['Número de Facções Criminosas'].fillna(0),
+    mode='markers',
+    marker=dict(size=8, color=df['Número de Facções Criminosas'].fillna(0), colorscale='Viridis'),
+    text=df['País']
+))
+
+fig_3d.update_layout(
+    scene=dict(
+        xaxis_title='Porcentagem do Dado A',
+        yaxis_title='Porcentagem do Dado B',
+        zaxis_title='Número de Facções Criminosas'
+    ),
+    title='Distribuição dos Dados A e B com Facções Criminosas'
+)
+
+fig_3d.show()
+
+# Relatório Final
+relatorio = """
+## Relatório Final: Análise Interativa do Impacto Econômico do Crime Organizado
+
+### Introdução
+Este projeto explora o impacto econômico do crime organizado em diversas regiões do mundo. Utilizando dados sobre atividades ilícitas e sua influência em setores econômicos, o objetivo é proporcionar uma análise visual interativa que ajude a compreender a magnitude e a distribuição do impacto econômico causado pelo crime organizado.
+
+### Metodologia
+Foram coletados dados sobre porcentagens de indicadores relacionados ao crime organizado, faturamento das facções, número de facções criminosas e impacto econômico em diferentes países. A análise foi realizada utilizando gráficos 2D e 3D interativos para ilustrar a relação entre esses dados.
+
+### Resultados
+Os gráficos 2D demonstram a distribuição das porcentagens dos dados A e B por país, o faturamento das facções e a comparação entre o número de facções e o percentual do PIB. O gráfico 3D interativo oferece uma visão mais detalhada da relação entre os indicadores econômicos e o número de facções criminosas.
+
+### Conclusão
+Os dados analisados mostram a complexidade e o alcance do impacto econômico do crime organizado. A visualização interativa proporciona uma compreensão mais profunda das conexões entre atividades criminosas e setores econômicos, ajudando a identificar áreas críticas e oportunidades para políticas de combate mais eficazes.
+
+### Recomendação
+Para enfrentar o impacto do crime organizado, é essencial uma abordagem integrada que inclua a regulamentação de setores vulneráveis, o fortalecimento das instituições de segurança e a implementação de tecnologias avançadas de monitoramento e análise.
+
+### Referências
+- Dados econômicos e indicadores sobre crime organizado.
+- Análise interativa com gráficos em Python utilizando matplotlib, seaborn e plotly.
+
+"""
+
+print(relatorio)
