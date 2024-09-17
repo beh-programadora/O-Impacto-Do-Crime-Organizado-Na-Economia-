@@ -1,0 +1,99 @@
+
+"Impacto Econômico do Crime Organizado: Identificação de Setores Críticos e Proposição de Soluções"
+
+Descrição do problema:
+
+O crime organizado representa uma ameaça significativa para a economia global, impactando diversos setores através de atividades ilícitas. Apesar das evidências de que o crime organizado afeta a economia, há uma falta de compreensão detalhada sobre quais setores são mais vulneráveis ​​e como esses impactos se manifestam em diferentes
+
+O problema central a ser resolvido com este projeto
+
+Como o crime organizado afeta os diferentes setores da economia e quais são as regiões mais impactadas por essas atividades ilícitas?
+
+Objetivos:
+
+identificar os Setores Econômicos Mais Afetados:
+
+Analisar dados sobre o impacto econômico do crime organizado em setores específicos como mineração, comércio de combustíveis, e
+identificar quais setores são maiores
+Mapear as Regiões Mais Afetadas:
+
+Utilizar dados sobre a presença de facções criminosas e suas atividades para mapear as regiões mais impactadas.
+Avaliar a esplendor entre a presença de facções criminosas e os impactos econômicos oferecidos em diferentes estados e países.
+Propor Soluções e Estratégias de Mitigação:
+
+Com base nos dados 
+Recomendar politíca e intervenções
+Justificativa:
+
+Entender o impacto do crime organizado na economia é crucial para a formulação de políticas eficazes de combate e prevenção. Uma análise interativa e detalhada dos dados permitirá uma melhor compreensão
+
+## Análise Interativa do Impacto Econômico do Crime Organizado
+
+
+O crime organizado representa um desafio significativo para a economia global, afetando diversos setores e criando impactos complexos. Este relatório apresenta uma análise detalhada sobre o impacto econômico do crime organizado, utilizando uma abordagem interativa e visual para oferecer insights sobre como essas atividades ilícitas influenciam a economia global. O objetivo principal é explorar a magnitude do impacto econômico do crime organizado e fornecer uma compreensão clara e acessível por meio de gráficos interativos e 3D.
+
+## Metodologia
+
+### Dados Coletados
+
+Foram analisados dados relacionados a atividades criminosas e seu impacto econômico, incluindo:
+- Porcentagens de indicadores econômicos associados ao crime.
+- Faturamento das facções criminosas.
+- Número de facções criminosas e sua presença em diferentes países e estados.
+- Percentual do PIB afetado pelo crime organizado.
+
+### Ferramentas e Técnicas
+
+Para a análise dos dados, foram utilizadas as seguintes ferramentas e técnicas:
+- **Python**: Para manipulação e análise de dados.
+- **Matplotlib e Seaborn**: Para criação de gráficos estáticos.
+- **Plotly**: Para gráficos interativos e 3D.
+
+## Resultados
+
+### Gráficos 2D
+
+1. **Porcentagem dos Dados A e B por País**
+   - Mostra a comparação das porcentagens associadas a diferentes indicadores para cada país analisado.
+
+2. **Faturamento das Facções com o Fluxo**
+   - Exibe o faturamento das facções criminosas em reais, ilustrando a magnitude financeira das atividades ilícitas.
+
+3. **Número de Facções Criminosas vs. Percentual do PIB**
+   - Representa a relação entre o número de facções criminosas e o percentual do PIB afetado.
+
+4. **Estados com Presença do PCC e Comando Vermelho**
+   - Compara o número de estados com presença de diferentes facções criminosas.
+
+### Gráficos 3D Interativos
+
+1. **Distribuição dos Dados A e B com Facções Criminosas**
+   - Um gráfico 3D interativo que combina porcentagens de indicadores econômicos com o número de facções criminosas, permitindo uma visualização mais detalhada e compreensiva da relação entre esses fatores.
+
+## Conclusão
+
+A análise revelou insights importantes sobre o impacto econômico do crime organizado. A visualização interativa facilitou a compreensão das complexas relações entre atividades criminosas e indicadores econômicos. A magnitude e a distribuição do impacto econômico são evidentes, destacando a necessidade de abordagens mais eficazes para mitigar esses efeitos.
+
+## Recomendações
+
+1. **Fortalecimento das Instituições de Segurança**
+   - Aumentar o investimento em tecnologias avançadas para monitoramento e controle das atividades criminosas.
+
+2. **Regulamentação de Setores Vulneráveis**
+   - Implementar políticas mais rígidas em setores identificados como vulneráveis ao crime organizado.
+
+3. **Desenvolvimento de Políticas de Prevenção**
+   - Criar estratégias e políticas voltadas para a prevenção e redução do impacto econômico do crime organizado.
+
+## Referências
+
+- Dados econômicos e indicadores sobre crime organizado.
+- Metodologia de análise interativa utilizando Python, matplotlib, seaborn e plotly.
+
+1. [Criminalidade no Brasil e no Mundo - Ipsos](https://www.ipsos.com/pt-br/criminalidade-no-brasil-e-no-mundo)
+2. [Crime Organizado se Infiltrou em Grandes Setores da Economia, Mostra Estudo da Esfera Brasil - CNN Brasil](https://www.cnnbrasil.com.br/nacional/crime-organizado-se-infiltrou-grandes-setores-da-economia-mostra-estudo-da-esfera-brasil/)
+3. [Estudo Inédito Reúne Dados Sobre Reflexos do Crime Organizado - Esfera Brasil](https://esferabrasil.com.br/artigos/estudo-inedito-reune-dados-sobre-reflexos-do-crime-organizado/)
+4. [Crime Organizado se Globalizou e se Transformou em uma Ameaça à Segurança - UNODC](https://www.unodc.org/lpo-brazil/pt/frontpage/2010/06/17-crime-organizado-se-globalizou-e-se-transformou-em-uma-ameaca-a-seguranca.html)
+5. [Estudo Mostra que Crime Organizado Migra para Negócios Lícitos e Afeta a Economia do País - Tribuna Hoje](https://tribunahoje.com/noticias/brasil/2024/06/25/140115-estudo-mostra-que-crime-organizado-migra-para-negocios-licitos-e-afeta-a-economia-do-pais)
+
+
