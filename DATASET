@@ -1,0 +1,29 @@
+País	 Facções_Criminosas 	Presença_PCC  	Presença_Comando_Vermelho	 Retaliações_FSP	 Instituições_Segurança_Pública 	Narcotráfico_Transnacional	 Presença_PCC_EUA	 Presença_Comando_Vermelho_EUA	 Percentual_PIB_Faturamento	 Ranking_Consumo_Cocaína	 Faturamento_Facções	 Porcentagem_Faturamento	 Total_Bases	 Novas_Bases	 Vítimas_Tráfico	 Renda_Bruta_Anual	  Migração	       Homens_Investidos	Porcentagem_Renda_Anual_Per_Capita
+Brasil     	72	                   23	             20	                     83	                 Mais	                          72	                      23	                     20	                                  3.98                	2	                   335 bilhões	             4%	                    20	            5	          142 mil       	US$ 3 bi	           Simples    	    US$ 72 milhões	         25%
+Chile      	55	                   15	             18	                     40	                 Mais	                          55	                      15	                     18	                                  2.50                 	4	                   250 bilhões	             3%	                    15	            3	          120 mil	        US$ 2 bi	           Simples	        US$ 50 milhões          	20%
+Colômbia	  70	                   22	             19	                     60	                 Mais	                          70	                      22	                     19	                                  3.80	                3 	                 300 bilhões	             4.2%	                  18	            4	          130 mil	        US$ 2.5 bi	         Simples	        US$ 60 milhões          	30%
+Argentina 	60	                   20	             15	                     50	                 Mais	                          60	                      20	                     15	                                  2.80	                5	                   280 bilhões	             3.5%	                  22	            6	          110 mil	        US$ 2.2 bi	         Simples	        US$ 55 milhões	          22%
+Estados Unidos	80	               30	             25	                     70	                 Mais	                          80	                      30	                     25	                                  4.50	                1                    500 bilhões	             5%	                    25	            7	          200 mil	        US$ 5 bi	           Complexa	        US$ 100 milhões	          40%
+
+Descrição das Colunas
+
+1. País: Nome do país.
+2. Facções_Criminosas: Número total de facções criminosas no país.
+3. Presença_PCC: Número de estados ou regiões com presença do Primeiro Comando da Capital (PCC).
+4. Presença_Comando_Vermelho: Número de estados ou regiões com presença do Comando Vermelho.
+5. Retaliações_FSP: Número de retaliações contra forças de segurança pública.
+6. Instituições_Segurança_Pública: Número de instituições de segurança pública (ou um indicador como "Mais").
+7. Narcotráfico_Transnacional: Número de facções criminosas envolvidas em narcotráfico transnacional.
+8. Presença_PCC_EUA: Número de estados nos EUA com presença do PCC.
+9. Presença_Comando_Vermelho_EUA: Número de estados nos EUA com presença do Comando Vermelho.
+10. Percentual_PIB_Faturamento: Percentual do PIB do país que corresponde ao faturamento das facções criminosas.
+11. Ranking_Consumo_Cocaína: Ranking do país em termos de consumo de cocaína (por exemplo, 2º maior).
+12. Faturamento_Facções: Valor total de faturamento das facções criminosas no país.
+13. Porcentagem_Faturamento: Percentual do faturamento total em relação à economia nacional.
+14. Total_Bases: Total de bases das facções criminosas no país.
+15. Novas_Bases: Número de novas bases de facções criminosas.
+16. Vítimas_Tráfico: Número de vítimas de tráfico de drogas.
+17. Renda_Bruta_Anual: Renda bruta anual gerada pelo país ou economia afetada.
+18. Migração: Tipo de migração associada ao crime organizado (Simples/Complexa).
+19. Homens_Investidos: Valor investido em medidas de segurança ou combate ao crime.
+20. Porcentagem_Renda_Anual_Per_Capita: Percentual da renda anual per capita afetada pelo crime organizado.
