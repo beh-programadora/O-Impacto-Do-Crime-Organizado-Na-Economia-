@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Dados
+*.csv
+*.xlsx
+*.json
+
+# Modelos
+*.pkl
+*.h5
+*.joblib
+
+# Logs
+*.log
+
+# Diretórios específicos
+data/
+models/
+output/
+
+# Ambiente virtual
+venv/
+ENV/
+env/
+*.env
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.swo
+
+# Arquivos do IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
