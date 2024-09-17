@@ -1,0 +1,19 @@
+Projeto_Impacto_Crime_Economia/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py
+│   ├── data_analysis.py
+│   ├── visualization.py
+│   ├── model.py
+│   └── utils.py
+├── dataset/
+│   ├── crime_economia.csv
+│   └── README.md
+└── resultados/
+    ├── grafico_3d_interativo.html
+    ├── grafico_barras.png
+    └── grafico_linha.png
