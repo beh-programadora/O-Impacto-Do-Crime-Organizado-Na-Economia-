@@ -1,0 +1,73 @@
+import pandas as pd
+import numpy as np
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Dados
+data = {
+    'País': ['Brasil', 'Chile', 'Colômbia', 'Argentina', 'México', 'Peru', 'Bolívia', 'EUA', 'Austrália', 'Nova Zelândia'],
+    'Porcentagem do dado A': [80, 54, 68.1, 59, 70, 65, 62, 85, 45, 50],
+    'Porcentagem do dado B': [75, 87, 80, 72, 77, 66, 64, 90, 50, 55],
+    'Faturamento das Facções (Bilhões)': [335, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Percentual do PIB': [4, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Número de Facções Criminosas': [72, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Estados com Presença do PCC': [23, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Estados com Presença do Comando Vermelho': [20, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan],
+    'Consumo de Cocaína': [np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan]
+}
+
+# Convertendo para DataFrame
+df = pd.DataFrame(data)
+
+# Gráfico 3D interativo com Plotly
+fig_3d = go.Figure()
+
+fig_3d.add_trace(go.Scatter3d(
+    x=df['Porcentagem do dado A'],
+    y=df['Porcentagem do dado B'],
+    z=df['Percentual do PIB'],
+    mode='markers',
+    marker=dict(size=10, color=df['Percentual do PIB'], colorscale='Viridis', showscale=True),
+    text=df['País']
+))
+
+fig_3d.update_layout(
+    title='Gráfico 3D Interativo: Impacto do Crime Organizado',
+    scene=dict(
+        xaxis_title='Porcentagem do dado A',
+        yaxis_title='Porcentagem do dado B',
+        zaxis_title='Percentual do PIB'
+    )
+)
+
+fig_3d.show()
+
+# Gráficos de Barras e Pizza com Matplotlib
+# Gráfico de Barras
+plt.figure(figsize=(12, 6))
+plt.bar(df['País'], df['Porcentagem do dado A'], color='skyblue')
+plt.xlabel('País')
+plt.ylabel('Porcentagem do dado A')
+plt.title('Porcentagem do dado A por País')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Gráfico de Pizza
+plt.figure(figsize=(8, 8))
+plt.pie(df['Porcentagem do dado B'].dropna(), labels=df['País'].dropna(), autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired(np.arange(len(df['Porcentagem do dado B'].dropna()))))
+plt.title('Distribuição das Porcentagens do dado B')
+plt.show()
+
+# Gráfico de Linhas
+plt.figure(figsize=(12, 6))
+plt.plot(df['País'], df['Porcentagem do dado A'], marker='o', linestyle='-', color='b', label='Porcentagem do dado A')
+plt.plot(df['País'], df['Porcentagem do dado B'], marker='o', linestyle='-', color='r', label='Porcentagem do dado B')
+plt.xlabel('País')
+plt.ylabel('Porcentagem')
+plt.title('Porcentagem do dado A e B por País')
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
