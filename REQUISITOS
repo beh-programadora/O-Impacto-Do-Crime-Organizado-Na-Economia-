@@ -1,0 +1,22 @@
+# Pacotes principais para análise de dados e visualização
+pandas==2.0.3
+numpy==1.24.3
+matplotlib==3.7.1
+seaborn==0.12.2
+scikit-learn==1.2.2
+
+# Pacotes para manipulação e visualização de dados interativos
+plotly==5.15.0
+bokeh==3.2.0
+
+# Pacotes adicionais para manipulação de dados e processamento
+scipy==1.11.2
+
+# Pacote para trabalhar com Jupyter Notebooks (opcional)
+jupyter==1.0.0
+
+# Pacote para carregar dados a partir de planilhas do Excel (opcional)
+openpyxl==3.1.2
+
+# Pacote para configuração e variáveis de ambiente (opcional)
+python-dotenv==1.0.0
